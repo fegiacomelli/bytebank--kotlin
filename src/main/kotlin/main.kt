@@ -1,35 +1,35 @@
 fun main() {
     println("Bem vindo ao Bytebank")
 
-    val felipe = Funcionario(
-        nome = "Felipe",
-        cpf = "111.111.111-11",
-        salario = 1000.0
+    val  contaCorrente = ContaCorrente(
+        titular = "Felipe",
+        numero = 1000
+    )
+    val contaPoupanca = ContaPoupanca(
+        titular = "Greice",
+        numero = 1001
     )
 
-    println("Nome: ${felipe.nome}")
-    println("cpf: ${felipe.cpf}")
-    println("Salario: ${felipe.salario}")
-    println("Bonificacao ${felipe.bonificacao()}")
+    contaCorrente.deposita(valor = 1000.0)
+    contaPoupanca.deposita(valor = 1000.0)
 
-    val greice = Gerente(
-        nome = "Greice",
-        cpf = "222.222.222-22",
-        salario = 2000.0,
-        senha = 1234
-    )
+    println("saldo corrente: ${contaCorrente.saldo}")
+    println("saldo Poupanca: ${contaPoupanca.saldo}")
 
-    println("Nome: ${greice.nome}")
-    println("cpf: ${greice.cpf}")
-    println("Salario: ${greice.salario}")
-    println("Bonificacao ${greice.bonificacao()}")
+    contaCorrente.saca(valor = 100.0)
+    contaPoupanca.saca(valor = 100.0)
 
-    if(greice.autentica(senha = 1234)){
-        println("Autenticou com sucesso !!!")
-    } else {
-        println("Falha na autenticacao")
-    }
+    println("saldo apos saque corrente: ${contaCorrente.saldo}")
+    println("saldo apos saque Poupanca: ${contaPoupanca.saldo}")
+
+    contaPoupanca.transfere(valor = 100.0,contaCorrente)
+
+    println("saldo poupanca apos transferir: ${contaPoupanca.saldo}")
+    println("saldo corrente apos receber transfencia: ${contaCorrente.saldo}")
+
+
 
 }
+
 
 
