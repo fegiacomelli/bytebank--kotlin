@@ -7,8 +7,8 @@ fun testaCoiasEReferencias() {
     println("numeroY $numeroY")
 
 
-    val contaJoao = Conta("Joao", 1002)
-    var contaMaria = Conta("Maria", 1003)
+    val contaJoao = ContaCorrente("Joao", 1002)
+    var contaMaria = ContaPoupanca("Maria", 1003)
 
     println("Titular conta joao: ${contaJoao.titular}")
     println("Titular conta maria: ${contaMaria.titular}")
