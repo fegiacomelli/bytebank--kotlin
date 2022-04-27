@@ -15,4 +15,5 @@ class Diretor(
         get() {
             return salario + plr
         }
+
 }
