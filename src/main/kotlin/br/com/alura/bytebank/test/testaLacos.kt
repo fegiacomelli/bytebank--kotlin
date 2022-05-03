@@ -7,7 +7,7 @@ fun testaLacos() {
         var saldo = i + 10.0
 
         println("Titular : $titular")
-        println("Numero da Conta : $numeroConta")
+        println("Numero da modelo.Conta : $numeroConta")
         println("Saldo da conta : $saldo")
         println()
 
@@ -29,7 +29,7 @@ fun testaLacos() {
         var saldo = i + 10.0
 
         println("Titular : $titular")
-        println("Numero da Conta : $numeroConta")
+        println("Numero da modelo.Conta : $numeroConta")
         println("Saldo da conta : $saldo")
         println()
 

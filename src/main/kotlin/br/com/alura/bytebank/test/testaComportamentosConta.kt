@@ -1,12 +1,21 @@
+import br.com.alura.bytebank.modelo.Cliente
+import br.com.alura.bytebank.modelo.ContaCorrente
+import br.com.alura.bytebank.modelo.ContaPoupanca
+
 fun testaComportamentosConta() {
-    val contaFelipe = ContaCorrente(titular = "Felipe", numero = 1000)
+
+    val felipe = Cliente(nome = "Felipe", cpf = "", senha = 1)
+
+    val contaFelipe = ContaCorrente(titular = felipe, numero = 1000)
     contaFelipe.deposita(200.0)
 
     println(contaFelipe.titular)
     println(contaFelipe.numero)
     println(contaFelipe.saldo)
 
-    val contaGreice = ContaPoupanca(numero = 1001, titular = "Greice")
+    val greice = Cliente(nome = "Greice", cpf = "", senha = 2)
+
+    val contaGreice = ContaPoupanca(numero = 1001, titular = greice)
     contaGreice.deposita(300.0)
 
     println(contaGreice.titular)
@@ -44,6 +53,6 @@ fun testaComportamentosConta() {
         println("Falha na Transferencia")
     }
 
-    println("Conta Felipe: ${contaFelipe.saldo}")
-    println("Conta Greice: ${contaGreice.saldo}")
+    println("modelo.Conta Felipe: ${contaFelipe.saldo}")
+    println("modelo.Conta Greice: ${contaGreice.saldo}")
 }
